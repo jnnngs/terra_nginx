@@ -8,7 +8,7 @@ resource "aws_instance" "myInstance" {
   #https://cloud-images.ubuntu.com/locator/ec2/
   #ami           = "ami-00db2b50b3b025163" #18.04 instance-store
   ami = "${data.aws_ami.ubuntu.id}"
-  instance_type = "t2.micro"
+  instance_type = "${var.aws_instance_type}"
   vpc_security_group_ids = ["${aws_security_group.nginx-sg.id}"]
   user_data     = <<-EOF
                   #!/bin/bash

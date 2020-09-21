@@ -3,6 +3,11 @@ variable "aws_region" {
   default     = "eu-west-2"
 }
 
+variable "aws_instance_type" {
+  description = "AWS EC2 instance type."
+  default     = "t2.micro"
+}
+
 data "aws_vpc" "currentvpc" {
     default = true
 }
