@@ -14,7 +14,7 @@ resource "aws_instance" "myInstance" {
                   sudo su
                   apt-get remove apt-listchanges --assume-yes --force-yes
                   apt-get -fuy --force-yes autoremove
-                  apt-get --force-yes clean
+                  apt-get --force-yes clean 
                   export DEBIAN_FRONTEND=noninteractive
                   apt-get update
                   apt-get -yq upgrade
