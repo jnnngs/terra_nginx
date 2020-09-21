@@ -1,6 +1,7 @@
 
 provider "aws" {
-    region = "eu-west-2"
+    #region = "eu-west-2"
+    region = "${var.aws_region}"
 }
 
 resource "aws_instance" "myInstance" {
@@ -55,26 +56,6 @@ resource "aws_security_group" "nginx-sg" {
         protocol = "-1"
         cidr_blocks = ["0.0.0.0/0"]
     }
-}
-
-data "aws_vpc" "currentvpc" {
-    default = true
-}
-
-data "aws_ami" "ubuntu" {
-    most_recent = true
-
-    filter {
-        name   = "name"
-        values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
-    }
-
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-
-    owners = ["099720109477"] # Canonical
 }
 
 output "DNS" {
