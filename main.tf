@@ -4,6 +4,14 @@ provider "aws" {
     region = "${var.aws_region}"
 }
 
+terraform {  
+    backend "s3" {
+        bucket = "terraform-state-jnnngs"
+        key    = "terraform-jnnngs.tfstate"    
+        region = "eu-west-2"
+    }
+}
+
 resource "aws_instance" "myInstance" {
   #https://cloud-images.ubuntu.com/locator/ec2/
   #ami           = "ami-00db2b50b3b025163" #18.04 instance-store
