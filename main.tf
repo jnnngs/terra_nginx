@@ -57,7 +57,3 @@ resource "aws_security_group" "nginx-sg" {
         cidr_blocks = ["0.0.0.0/0"]
     }
 }
-
-output "DNS" {
-  value = aws_instance.myInstance.public_dns
-}
