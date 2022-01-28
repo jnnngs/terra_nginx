@@ -28,7 +28,7 @@ resource "aws_instance" "myInstance" {
                   apt-get update
                   apt-get -yq upgrade
                   apt-get -yq install nginx unzip wget git-core
-                  echo "<p> My Instance! </p>" >> /var/www/html/index.html
+                  echo "<p> Hello World! </p>" >> /var/www/html/index.html
                   #wget -O /var/www/html/index.html https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.html
                   #wget -O /var/www/html/index.css https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.css
                   #wget -O /var/www/html/index.js https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.js

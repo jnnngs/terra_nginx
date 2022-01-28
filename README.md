@@ -1,2 +1,2 @@
 # terra_nginx
-Terraform script to deploy MyWebsite from GitHib on AWS
+Terraform script to deploy "Hello World" EC2 on AWS
