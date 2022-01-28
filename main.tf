@@ -28,13 +28,13 @@ resource "aws_instance" "myInstance" {
                   apt-get update
                   apt-get -yq upgrade
                   apt-get -yq install nginx unzip wget git-core
-                  #echo "<p> My Instance! </p>" >> /var/www/html/index.html
+                  echo "<p> My Instance! </p>" >> /var/www/html/index.html
                   #wget -O /var/www/html/index.html https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.html
                   #wget -O /var/www/html/index.css https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.css
                   #wget -O /var/www/html/index.js https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/index.js
                   #wget -O /var/www/html/jnnn.gs.txt https://raw.githubusercontent.com/jnnngs/jnnngs.github.io/master/jnnn.gs.txt
-                  wget -O /var/www/html/master.zip https://github.com/jnnngs/jnnngs.github.io/archive/master.zip
-                  unzip -o -j /var/www/html/master.zip 'jnnngs.github.io-master/*' -d /var/www/html
+                  #wget -O /var/www/html/master.zip https://github.com/jnnngs/jnnngs.github.io/archive/master.zip
+                  #unzip -o -j /var/www/html/master.zip 'jnnngs.github.io-master/*' -d /var/www/html
                   chown -R www-data:www-data /var/www
                   EOF
 }
