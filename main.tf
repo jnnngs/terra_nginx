@@ -14,7 +14,7 @@ terraform {
 
 resource "aws_instance" "myInstance" {
   #https://cloud-images.ubuntu.com/locator/ec2/
-  #ami           = "ami-00db2b50b3b025163" #18.04 instance-store
+  #ami           = "ami-0cad805e267edf75d" #20.04 instance-store
   ami = "${data.aws_ami.ubuntu.id}"
   instance_type = "${var.aws_instance_type}"
   vpc_security_group_ids = ["${aws_security_group.nginx-sg.id}"]
